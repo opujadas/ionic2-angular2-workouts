@@ -22,4 +22,12 @@ export class WorkoutService{
 		return this.http.get(this.WorkoutsUrl + '?apiKey=' + this.apiKey)
 			.map(res => res.json()); 
 	}
+
+	addWorkout(workout)
+	{
+		var headers = new Headers(); 
+		headers.append('Content-Type', 'application/json'); 
+		return this.http.post(this.WorkoutsUrl + '?apiKey=' + this.apiKey, JSON.stringify(workout), {headers: headers})
+			.map(res => res.json()); 
+	}
 }

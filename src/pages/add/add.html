@@ -7,5 +7,30 @@
 </ion-header>
 
 <ion-content padding>
-ADD ! Bla bla bla.. mes exercices !
+
+		<form (submit)="onSubmit()">
+			<ion-list>
+				<ion-item>
+					<ion-label>Title</ion-label>
+					<ion-input [(ngModel)]="title" name="title" type="text"></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-label>Note</ion-label>
+					<ion-input [(ngModel)]="note" name="note" type="textarea"></ion-input>
+				</ion-item>		
+				<ion-item>
+					<ion-label>Type</ion-label>
+					<ion-select [(ngModel)]="type" name="type">
+						<ion-option value="Jogging">Jogging</ion-option>
+						<ion-option value="Abdos">Abdos</ion-option>
+						<ion-option value="Vélo">Vélo</ion-option>
+						<ion-option value="Badmington">Badmington</ion-option>
+						<ion-option value="Squash">Squash</ion-option>
+					</ion-select>
+				</ion-item>		
+				<ion-item>
+					<button ion-button type="submit" block>Ajouter un exercice</button>
+				</ion-item>		
+			</ion-list>
+		</form>
 </ion-content>
