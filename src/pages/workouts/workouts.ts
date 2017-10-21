@@ -29,6 +29,14 @@ constructor(public navCtrl: NavController, private workoutService: WorkoutServic
   		});
   }
 
+  ionViewWillEnter()
+  {
+   	this.workoutService.getWorkouts().subscribe(
+  		workouts => {
+  			this.workouts = workouts;
+  			console.log(workouts); 
+  		}); 	
+  }
   	
   workoutSelected(event, workout)
   {

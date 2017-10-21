@@ -30,4 +30,11 @@ export class WorkoutService{
 		return this.http.post(this.WorkoutsUrl + '?apiKey=' + this.apiKey, JSON.stringify(workout), {headers: headers})
 			.map(res => res.json()); 
 	}
+
+	deleteWorkout(workoutId)
+	{
+			return this.http.delete(this.WorkoutsUrl + '/' + workoutId + '?apiKey=' + this.apiKey)
+				.map(res => res.json()); 
+
+	}
 }
