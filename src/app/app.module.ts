@@ -5,7 +5,7 @@ import { MyApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
 import { WorkoutsPage } from '../pages/workouts/workouts';
-//import { WorkoutDetailsPage } from '../pages/workout-details/workout-details';
+import { WorkoutDetailsPage } from '../pages/workout-details/workout-details';
 import { AddPage } from '../pages/add/add';
 // import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
@@ -23,7 +23,9 @@ import { HttpModule } from '@angular/http';
     HomePage,
     TabsPage,
     WorkoutsPage,
+    WorkoutDetailsPage,
     AddPage
+
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,7 @@ import { HttpModule } from '@angular/http';
     HomePage,
     TabsPage,
     WorkoutsPage,
+    WorkoutDetailsPage,
     AddPage
   ],
   providers: [
