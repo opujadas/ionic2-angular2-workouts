@@ -4,9 +4,11 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
+import { WorkoutService} from './services/workout.service'; 
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.html',
+  providers: [WorkoutService]
 })
 export class MyApp {
   rootPage:any = TabsPage;
